@@ -1,0 +1,10 @@
+<div class="grid-container">
+  <ag-grid-angular style="width: 100%; height: 200px;" class="ag-theme-blue" [(rowData)]="rowData" [columnDefs]="columnDefs"
+    [gridOptions]="gridOptions" 
+    (selectionChanged)="onRowSelectionChanged($event)">
+  </ag-grid-angular>
+</div>
+<br/>
+<button class="btn" (click)="addTarget();" >Add New Target</button>&nbsp;
+<button class="btn" (click)="deleteTarget();" >Delete</button>
+<app-create-target [targetGridOptions]="gridOptions"></app-create-target>
